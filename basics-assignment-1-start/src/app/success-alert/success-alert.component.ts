@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
     h3 {
       color: green;
       font-style: italic;
+      padding: 20px;
+      background-color: mistyrose;
+      border: 1px solid red;
     }
   `]
 })
