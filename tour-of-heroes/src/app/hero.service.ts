@@ -40,6 +40,7 @@ export class HeroService {
     // TODO: send the message _after_ fetching the heroes
     // this.messageService.add('HeroService: fetched heroes');
     return this.http.get<Hero[]>(this.heroesUrl).pipe(
+      tap(_ => this.log('fetched heroes')),
       catchError(this.handleError('getHeroes', []))
     );
   }
