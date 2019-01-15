@@ -1,4 +1,4 @@
-import { Component } from '@angular-core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-success-alert',
@@ -11,6 +11,6 @@ import { Component } from '@angular-core';
   `]
 })
 
-export class SuccessComponent {
+export class SuccessAlertComponent {
 
 }
