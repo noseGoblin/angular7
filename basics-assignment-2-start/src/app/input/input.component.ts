@@ -7,11 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputComponent implements OnInit {
   userName = '';
-  userCreationStatus = 'The Username is: ';
+  userCreationStatus = 'Choose your Username.';
 
-  constructor() {
-    
-  }
+  constructor() { }
 
   ngOnInit() {
   }

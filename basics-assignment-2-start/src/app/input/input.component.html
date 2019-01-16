@@ -1,17 +1,16 @@
-<label>Username</label>
-<br>
-<p>Please, input your Username here:</p>
-<br>
-<input type="text" class="form-input"
-  [(ngModel)]="userName" ng-pattern="regex">
-<br><br>
-<button class="btn btn-primary"
-[disabled]="!userName"
-(click)="onCreateUser()">
-  Reset your Username
-</button>
-<br>
-<p>
-  {{ userCreationStatus }}
-</p>
-<h3>{{ userName }}</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Username: {{ userName }}</label>
+      <p>{{ userCreationStatus }}</p>
+      <p>Please, input your Username here:</p>
+      <input type="text" class="form-control"
+        [(ngModel)]="userName" ng-pattern="regex">
+      <br>
+      <button
+        class="btn btn-primary"
+        [disabled]="!userName"
+        (click)="onCreateUser()">Reset your Username</button>
+    </div>
+  </div>
+</div>
