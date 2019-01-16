@@ -1,3 +1,17 @@
+<label>Username</label>
+<br>
+<p>Please, input your Username here:</p>
+<br>
+<input type="text" class="form-input"
+  [(ngModel)]="userName" ng-pattern="regex">
+<br><br>
+<button class="btn btn-primary"
+[disabled]="!userName"
+(click)="onCreateUser()">
+  Reset your Username
+</button>
+<br>
 <p>
-  input works!
+  {{ userCreationStatus }}
 </p>
+<h3>{{ userName }}</h3>

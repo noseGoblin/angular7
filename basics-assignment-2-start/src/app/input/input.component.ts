@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
+  userName = '';
+  userCreationStatus = 'The Username is: ';
 
-  constructor() { }
+  constructor() {
+    
+  }
 
   ngOnInit() {
+  }
+
+  onCreateUser() {
+    this.userName = '';
+    this.userCreationStatus = 'The Username has been erased! ' + this.userName;
+  }
+
+  onUpdateInputName(event: Event) {
+    this.userName = '';
   }
 
 }
