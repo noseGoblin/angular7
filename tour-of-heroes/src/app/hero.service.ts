@@ -88,6 +88,9 @@ export class HeroService {
     );
   }
 
+  /* GET heroes whose name contains search term */
+  
+
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
     this.messageService.add(`HeroService: ${message}`);
