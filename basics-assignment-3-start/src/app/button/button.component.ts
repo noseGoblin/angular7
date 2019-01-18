@@ -17,8 +17,14 @@ export class ButtonComponent implements OnInit {
   }
 
   toggleStatus() {
-    this.toggle != this.toggle;
+    this.toggle = !this.toggle;
   }
 
-  let getToggleStatus = this.toggle (this.toggle ? this.textHide : this.textDisplay );
+  getToggleStatus() {
+    if(this.toggle){
+      return this.textHide;
+    } else{
+      return this.textDisplay;
+    }
+  }
 }

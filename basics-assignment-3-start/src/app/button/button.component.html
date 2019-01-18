@@ -3,6 +3,6 @@
     (click)="toggleStatus()">
   Display Details
 </button>
-<p [ngStyle]="{display: getToggleStatus()}">
+<p [ngStyle]="{display: toggle ? 'block' : 'none'}">
   Secret Password = tuna
 </p>
