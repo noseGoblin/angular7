@@ -6,3 +6,7 @@
 <p [ngStyle]="{display: toggle ? 'block' : 'none'}">
   Secret Password = tuna
 </p>
+
+<ul>
+  <li [*ngFor="logClick"] [ngStyle]="{backgroundColor: logClick > 3 ? 'blue' : 'none'}"></li>
+</ul>

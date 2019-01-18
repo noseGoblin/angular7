@@ -10,6 +10,8 @@ export class ButtonComponent implements OnInit {
   textDisplay: string = 'block';
   textHide: string = 'none';
   toggle: boolean = true;
+  logClick: number = 0;
+
 
   constructor() { }
 
@@ -18,6 +20,8 @@ export class ButtonComponent implements OnInit {
 
   toggleStatus() {
     this.toggle = !this.toggle;
+    this.logClick++;
+    return this.logClick;
   }
 
   getToggleStatus() {
