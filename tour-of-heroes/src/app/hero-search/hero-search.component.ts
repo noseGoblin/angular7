@@ -13,10 +13,10 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./hero-search.component.css']
 })
 export class HeroSearchComponent implements OnInit {
-  heores$: Observable<Hero[]>;
+  heroes$: Observable<Hero[]>;
   private searchTerms = new Subject<string>();
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService) {}
 
   // Push a search term in the observable stream.
   search(term: string): void {
@@ -24,7 +24,15 @@ export class HeroSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.
-  }
+    this.heroes$ = this.searchTerms.pipe(
+      // wait 300ms after each keystroke before considering the term
+      debounceTime(300),
 
+      // ignore new term if same as previous term
+      distinctUntilChanged(),
+
+      // switch to a new search observable each time the term changes
+      switchMap((term: string) => this.heroService.searchHeroes(term)),
+    );
+  }
 }
