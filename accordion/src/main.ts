@@ -9,6 +9,7 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './material-module';
 
+import {MatExpansionModule} from '@angular/material/expansion';
 import {ExpansionStepsExample} from './app/expansion-steps-example';
 
 @NgModule({
@@ -20,6 +21,7 @@ import {ExpansionStepsExample} from './app/expansion-steps-example';
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    MatExpansionModule
   ],
   entryComponents: [ExpansionStepsExample],
   declarations: [ExpansionStepsExample],

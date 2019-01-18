@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 
+import { environment } from './../environments/environment';
+
 /**
  * @title Expansion panel as accordion
  */
