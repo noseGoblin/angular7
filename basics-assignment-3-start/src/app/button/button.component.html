@@ -1,12 +1,28 @@
-<button 
-    class="btn btn-primary"
-    (click)="toggleStatus()">
+<!-- Easy toggle
+<button class="btn btn-primary" (click)="toggle = !toggle">
   Display Details
-</button>
-<p [ngStyle]="{display: toggle ? 'block' : 'none'}">
-  Secret Password = tuna
-</p>
+</button> -->
 
-<ul>
-  <li [*ngFor="logClick"] [ngStyle]="{backgroundColor: logClick > 3 ? 'blue' : 'none'}"></li>
-</ul>
+<button class="btn btn-primary" (click)="onToggleStatus()">
+    Display Details
+  </button>
+  
+<!-- <p [ngStyle]="{display: toggle ? 'block' : 'none'}"> -->
+<p *ngIf="toggle">Secret Password = tuna</p>
+
+<div 
+  *ngFor="let logItem of log; let i = index"
+  [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': i >= 4}"
+>{{ logItem }}</div>
+
+<!-- <div 
+  *ngFor="let logItem of log"
+  [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': logItem >= 5}"
+>{{ logItem }}</div> -->
+
+<!-- <ul>
+  <li [ngStyle]="{backgroundColor: logClick > 3 ? 'blue' : 'none'}"></li>
+</ul> -->
+

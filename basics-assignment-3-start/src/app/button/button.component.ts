@@ -7,10 +7,10 @@ import { BlockingProxy } from 'blocking-proxy';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit {
-  textDisplay: string = 'block';
-  textHide: string = 'none';
-  toggle: boolean = true;
-  logClick: number = 0;
+  toggle: boolean = false;
+  log: array = [];
+  // textDisplay: string = 'block';
+  // textHide: string = 'none';
 
 
   constructor() { }
@@ -18,17 +18,9 @@ export class ButtonComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleStatus() {
+  onToggleStatus() {
     this.toggle = !this.toggle;
-    this.logClick++;
-    return this.logClick;
-  }
-
-  getToggleStatus() {
-    if(this.toggle){
-      return this.textHide;
-    } else{
-      return this.textDisplay;
-    }
+    // this.log.push(this.log.length + 1);
+    this.log.push(new Date());
   }
 }
